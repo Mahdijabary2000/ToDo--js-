@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background:linear-gradient(90deg,#03001e,#7303c0,#ec38bc,#fdeff9)
+}
+*::-webkit-scrollbar{
+  background-color: #fff;
+  width: 16px;
+}
+*::-webkit-scrollbar-track{
+  background-color: #0f2027;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #5e5e62;
+  border-radius: 16px;
+  border: 4px solid #0f2027;
+}
+*:root{
+ scroll-behavior:smooth; 
+}
+
+.main-todolist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.title-todo{
+  margin-top: 100px;
+  animation-name:backInLeft ;
+    animation-duration: 2s;
+    color: white;
+
+}
+.todo-text{
+    text-align:right;
+    padding-right: 1rem;
+    width: 350px;
+    height: 40px;
+    outline: none;
+    border-radius: 0.2rem;
+    border: none;
+    margin-top: 50px;
+    animation-name:backInLeft ;
+    animation-duration: 2s;
+}
+
+.list{
+    width: 350px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color:#ffc4ee ;
+    border-radius: 0.5rem;
+    /* direction: rtl; */
+    margin-top:2rem ;
+    animation-name:backInLeft ;
+    animation-duration: 2s;
+    padding-right:7px;
+    padding-left:5px;
+    color: #7303c0;
+    font-size: 1rem;
+    
+}
+
+
+.remove-note{
+    cursor: pointer;
+    background:linear-gradient(90deg,#7303c0,#ec38bc);
+    padding: 3px 10px;
+    border-radius:0.5rem;
+    color: white;
+    font-weight: bold;  
+}
+
+.add{
+    background-color:#c471ed ;
+    border:4px solid #2a2164;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 3%;
+    left: 4%;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name:backInLeft ;
+    animation-duration: 2s;
+    
+    
+}
+.add img{
+ width: 50px;
+ height: 40px;
+ 
+}
+#list{
+  height: 500px;
+  
+}
+
+.moudal{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  margin: auto;
+  top: -130px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 320px;
+    height: 300px;
+    border-radius: 1rem;  
+    animation-name:backInLeft ;
+  animation-duration: 2s; 
+} 
+input::placeholder{
+    color: rgb(169, 168, 168);
+}
+.title-modul{
+  font-size: 20px;
+  font-weight: 800;
+  animation-name:backInLeft ;
+  animation-duration: 2s;
+  color:#fff;
+}
+.activity-input{
+    width: 300px;
+    height: 30px;
+    outline:none;
+    border: none;
+    border-radius:5px;
+    padding-right: 0.5rem;
+    animation-name:backInLeft ;
+    animation-duration: 2s;
+}
+.label-input{
+    font-size:12px;
+    margin-right: 1rem;
+}
+.input-moudal{
+   width: 50px;
+   height: 25px;
+   text-align: center;
+   outline: none;
+   border: none; 
+   margin-right: 1rem;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  animation-name:backInLeft ;
+  animation-duration: 2s;
+}
+.btn{
+    width: 120px ;
+    height: 40px;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .record{
+ background-color: #7303c0;
+ color: white;
+}
+ .optout{
+    background-color: #ec38bc;
+    color: #fff;   
+    font-size: 0.75rem;
+    
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 320px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    
+  }
+  
+
+  
+  @media screen and (min-width:1024px){
+    .todo-text{
+        text-align:right;
+        padding-right: 1rem;
+        width: 400px;
+        height: 50px;
+        outline: none;
+        border-radius: 0.2rem;
+        border: none;
+        box-shadow: 2px 2px 6px gray;
+
+    }
+    .moudal{
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: auto;
+        top:-130px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 600px;
+        height: 350px;
+        
+        
+    } 
+   
+    .activity-input{
+      width:80%;
+      height: 35px;
+      
+  }
+  .list{
+      width: 450px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      border-radius: 0.5rem;
+      margin-top:2rem ;  
+      transition: 0.5s;
+
+  }
+  .list:hover{
+    transform: scale(1.2);
+  }
+  }
+
+
+  
